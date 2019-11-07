@@ -97,3 +97,4 @@ Cookie曾一度用于客户端数据的存储，新的存储API由 Web storage A
   
 服务器使用Set-Cookie 响应头部向用户代理（一般是浏览器）发送Cookie信息。一个简单的Cookie可能像这样：
 Set-Cookie: <cookie名>=<cookie值>
+
