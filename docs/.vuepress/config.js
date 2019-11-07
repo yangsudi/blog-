@@ -3,7 +3,6 @@ module.exports = {
     description: 'This  is yangsudi\'blog',
     base: '/vuepress',
     port:　'8032',
-
     themeConfig: {
         nav: [
             { text: 'Tools', link: '/Tools/' },
