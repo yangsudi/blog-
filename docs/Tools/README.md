@@ -1,8 +1,8 @@
 #  常用的工类
 ## 1. 路径匹配
-``` javascript
+```javascript
 // 自动匹配路径
-const path = require('path')
+const path = require('path');
 function resovle(folderName) {
     return path.join(__dirName, folderName)
 }
@@ -17,7 +17,7 @@ function resovle(folderName) {
 function formatTime(time) {
   if (typeof time === 'string') {
       let str = time.split('.')[0] || '';
-      str = str.replace(/T/g,' ')
+      str = str.replace(/T/g,' ');
       return str
   } else {
     return ""

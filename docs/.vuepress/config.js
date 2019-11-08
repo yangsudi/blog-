@@ -6,6 +6,7 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Tools', link: '/Tools/' },
+            { text: 'javascript', link: '/javascript/' },
         ],
         lastUpdated: '最后一次更新', // string | boolean
         serviceWorker: {
@@ -41,6 +42,9 @@ module.exports = {
             ],
             '/Tools/': [
               ''
+            ],
+            '/javascript/': [
+                ''
             ]
         }
     }
