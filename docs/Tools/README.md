@@ -24,3 +24,9 @@ function formatTime(time) {
   }
 }
 ```
+### 3.判断是否为纯函数
+```javascript
+function isPlainObject(obj) {
+  return window.toString.call(obj) === '[object object]'
+}
+```

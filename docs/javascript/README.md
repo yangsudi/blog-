@@ -369,3 +369,41 @@ var foo = 1;
 
 ## 从ECMAScript规范解读this
 
+## JavaScript深入之闭包
+### 定义
+MDN对闭包的定义：
+> 闭包是指那些能够访问自由变量的函数。
+
+那什么是自由变量呢？
+> 自由变量是指函数中使用，但既不是函数的参数也不是函数的局部变量的变量。
+
+由此，我们可以看出闭包共有的两部分组成：
+> 闭包 = 函数 + 函数能够访问的自由变量
+
+举个例子：
+```javascript
+var a = 2;
+function foo() {
+  console.log(a)
+};
+foo();
+```
+foo 函数可以访问变量a,但是a 既不是foo 的函数的局部变量,
+也不是foo函数的的参数，所以a 就是自由变量。
+
+### new 操作符做了什么
+1. 创建了一个空的对象(obj)
+2. 设置该对象的构造函数
+3. 把新建对象作为this的上下文
+4. 如果该函数没有返回对象，则this作为返回值
+
+```javascript
+function objectFactoru() {
+  var obj = {}
+  var constroctor = [].shift.apply(arguments)
+  obj.__proto__ = constroctor.prototype
+  var ret = constroctor.apply(obj, arguments)
+  return typeof ret === 'object' ? ret : obj
+
+}
+```
